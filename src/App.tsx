@@ -1,4 +1,15 @@
-import { Area, Bar, CartesianGrid, Cell, ComposedChart, Legend, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import {
+  Area,
+  Bar,
+  CartesianGrid,
+  Cell,
+  ComposedChart,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 import mockData from "./mocks/data.json";
 
@@ -32,6 +43,7 @@ function App() {
           orientation="left"
           label={{ value: "Area", angle: -90, position: "insideLeft" }}
         />
+        <Tooltip />
         <Legend />
         <Bar dataKey="value_bar" fill="#7876ce">
           {data.map(entry => (
