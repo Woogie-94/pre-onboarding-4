@@ -60,7 +60,7 @@ function App() {
           />
           <Tooltip />
           <Legend />
-          <Bar dataKey="value_bar" fill="#7876ce">
+          <Bar dataKey="value_bar" fill="#7876ce" onClick={data => setDistrict(data.id)}>
             {data.map(entry => (
               <Cell fill={entry.id === district ? "#5250d1" : "#7876ce"} key={entry.id} />
             ))}
